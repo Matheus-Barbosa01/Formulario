@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="cursor">
+        <div class="cursor" ></div>
+        <div class="sombra"></div>
+    </div>
+    
+
+    <form action="processar.php" method="post" id="form">
+        <div class="formulario">
+
+            <h1>Formulário</h1>
+
+            <label for="nome" class="textinput">Nome:</label>
+            <input type="text" id="nome" name="nome"  placeholder="Nome completo" required><br><br>
+
+            <label for="email" class="textinput">Email:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required><br><br>
+            
+            <label for="senha" class="textinput">Senha:</label>
+            <input type="text" id="senha" name="senha" minlength="5" required>
+            <div class="img" onclick="typesenha()"></div><br><br>
+            
+            <label for="idade" class="textinput">Idade:</label>
+            <input type="number" id="idade" name="idade" min="18" max="99"><br><br>
+            <label for="datanascimento" class="textinput">Data de nascimento : </label>
+            <input type="date" name="datanascimento" id="datanascimento" required><br><br>
+            
+            <label for="genero" class="textinput">Gênero:</label>
+            <select name="genero" id="genero">
+                <option value="padrao">Selecione</option>;
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outros">outros</option>
+            </select><br><br>
+            
+            <label for="mensagem" class="textinput">Caixa de mensagem:</label>
+            <textarea name="mensagem" id="mensagem" placeholder="Digite aqui algo sobre você "></textarea><br><br>
+            
+            <label for="termos" >Aceitar termos:</label>
+            <input type="checkbox" name="termos" id="termos" required><br><br>
+            
+            <input type="submit" value="Enviar" id="enviar">
+        </div>
+
+    </form>
+    <script src="animations.js"></script>
+</body>
+</html>

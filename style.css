@@ -1,0 +1,166 @@
+ body{    
+    margin: 0 auto;
+    /*pega três cores e um degrader entre elas */
+    background: linear-gradient(45deg, #006769, #40A578, #9DDE8B, #E6FF94);
+    background-size: 300% 300%;
+    /*animação para fazer as cores se movimentar */
+    animation: colors 10s ease infinite;
+}
+
+#form{
+    /*confuguração basica do formulario*/
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.formulario{/*div que contem todo o formulario */
+    display: flex;
+    margin:0 auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: aquamarine;
+    height: auto;
+    width: 35vw;
+    border-radius: 30px;
+    
+}
+.textinput{ /*todos os input do formulario que recebe algum valor*/
+    display: block;
+    text-align: left;
+    width: 200px;
+}
+#termos{/*muda a posição do input do termo */
+    transform: translateY(-18px) translateX(62px);
+}
+#datanascimento{
+    height: 20px;
+}
+#enviar{/*configuração do botão enviar */
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: #fff;
+    /*cria uma sombra dentro e fora do botão*/
+    box-shadow: 5px 4px 5px 0px rgb(246, 241, 241), inset 0px 0px 3px 0px rgb(246, 241, 241);
+
+}
+#mensagem{/*configuração do textarea  para limitar o seu tamanho*/
+    text-align: left;
+    border-radius: 5px;
+
+    max-width: 430px;
+    width: 200px;
+    min-width: 150px;
+
+    max-height: 300px;
+    height: 75px;
+    min-height: 50px;
+}
+#mensagem:hover{/*detectar se o mouse entrou naquela area e implementar os comando a seguir*/
+    background-color: black;
+    color:#fff;
+}
+#nome, #email, #senha, #idade, #datanascimento, #enviar, #genero {/*cria um padrão para todos */
+
+    width: 200px;
+    border-radius: 5px;
+   text-align: center; 
+}
+#nome, #email, #senha, #idade, #datanascimento, #genero, #mensagem {/*cria uma sombra para todos os seletores selecionados */
+    box-shadow: 5px 3px 5px -2px;
+}
+input:hover{/*detectar se o mouse entrou area dos inputs e altera os esse valores */
+    background-color: rgb(30, 27, 27);
+    color: #fff;
+}
+#genero:hover{/*detectar se o mouse entrou area do id selecioado e altera os esse valores */
+    background-color: rgb(30, 27, 27);
+    color: #fff; 
+}
+.cursor{/*é uma bola que segui o mouse */
+
+    display: block;
+    background: black;
+    height: 30px;
+    width: 30px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    position: relative;
+    /*o tempo que ele vai muda da posição atual para a nova e como ele vai fazer isso*/ 
+    transition:all 0.1s ease;
+    box-shadow: 0 0 10px 3px;
+    /*animação para parecer que ela não fica parada */
+    animation: bola 1s ease-in-out infinite alternate;
+    
+}
+.sombra{/*sombra que acompanha a bola */
+    display: block;
+    background: black;
+    border-radius: 50%;
+    width: 10px;
+    margin: 0 auto;
+    height: 5px;
+    margin-top: 5px;
+    box-shadow: 0 0 6px 7px;
+    /*animação para fazer ela acompanhar os movimentos da bola */
+    animation: sombraanimation 1s ease-out infinite alternate;
+}
+.img{/*imagem do olho visivel. Serve para alterar o tipo de input senha para ficar visivel ou não*/
+    position: relative;
+    height: 15px;
+    width: 15px;
+    background: url(senha_visivel.svg);
+    background-size: cover;
+    transform: translateY(-18px) translateX(90px);
+    cursor: pointer;
+    
+}
+.img.senha_oculta{/* imagem que sera alterada caso o usuario mudar o typo de typo do input senha*/
+    background: url(senha_oculta.svg);
+    background-size: cover;
+}
+@keyframes sombraanimation {/*animação da sombra*/
+    0% { 
+        width:10px; 
+        box-shadow: 0 0 6px 7px black;
+    }
+    50% {
+        width: 15px; 
+        box-shadow: 0 0 6px 8px black;
+    }
+    100% {
+        width: 10px; 
+        box-shadow: 0 0 6px 7px black;
+    }
+}
+@keyframes bola {/*aminação da bola*/
+    0% {
+        padding-left: 0px;
+        margin-bottom: 20px; 
+    }
+    50% { 
+        padding-left: 0.7px; 
+        margin-bottom: 19.4px;
+    }
+    100% { 
+        padding-left: 0px; 
+        margin-bottom: 20px;
+    }
+}
+@keyframes colors {/*aminação das cores de fundo*/
+    0%{
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
