@@ -1,4 +1,4 @@
- body{    
+body{    
     margin: 0 auto;
     /*pega três cores e um degrader entre elas */
     background: linear-gradient(45deg, #006769, #40A578, #9DDE8B, #E6FF94);
@@ -6,7 +6,6 @@
     /*animação para fazer as cores se movimentar */
     animation: colors 10s ease infinite;
 }
-
 #form{
     /*confuguração basica do formulario*/
     display: flex;
@@ -26,8 +25,7 @@
     background-color: aquamarine;
     height: auto;
     width: 35vw;
-    border-radius: 30px;
-    
+    border-radius: 30px; 
 }
 .textinput{ /*todos os input do formulario que recebe algum valor*/
     display: block;
@@ -48,7 +46,6 @@
     color: #fff;
     /*cria uma sombra dentro e fora do botão*/
     box-shadow: 5px 4px 5px 0px rgb(246, 241, 241), inset 0px 0px 3px 0px rgb(246, 241, 241);
-
 }
 #mensagem{/*configuração do textarea  para limitar o seu tamanho*/
     text-align: left;
@@ -67,7 +64,6 @@
     color:#fff;
 }
 #nome, #email, #senha, #idade, #datanascimento, #enviar, #genero {/*cria um padrão para todos */
-
     width: 200px;
     border-radius: 5px;
    text-align: center; 
@@ -84,7 +80,6 @@ input:hover{/*detectar se o mouse entrou area dos inputs e altera os esse valore
     color: #fff; 
 }
 .cursor{/*é uma bola que segui o mouse */
-
     display: block;
     background: black;
     height: 30px;
@@ -96,8 +91,7 @@ input:hover{/*detectar se o mouse entrou area dos inputs e altera os esse valore
     transition:all 0.1s ease;
     box-shadow: 0 0 10px 3px;
     /*animação para parecer que ela não fica parada */
-    animation: bola 1s ease-in-out infinite alternate;
-    
+    animation: bola 1s ease-in-out infinite alternate;   
 }
 .sombra{/*sombra que acompanha a bola */
     display: block;
@@ -119,7 +113,6 @@ input:hover{/*detectar se o mouse entrou area dos inputs e altera os esse valore
     background-size: cover;
     transform: translateY(-18px) translateX(90px);
     cursor: pointer;
-    
 }
 .img.senha_oculta{/* imagem que sera alterada caso o usuario mudar o typo de typo do input senha*/
     background: url(senha_oculta.svg);

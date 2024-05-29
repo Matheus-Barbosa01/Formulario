@@ -10,7 +10,6 @@ document.addEventListener('mousemove', function(m){
     animacao.style.top = ypos + 'px';
 });
 
-//
 const password = document.querySelector('#senha');
 const img = document.querySelector('.img');
 //função para alterar o typo de password para text, e adicionar ou remover a imagem  
@@ -23,4 +22,3 @@ function typesenha() {
         img.classList.remove('senha_oculta');
     }
 }
-
